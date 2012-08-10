@@ -82,7 +82,6 @@ class AddressesController < ApplicationController
   end
   
   def validate_email
-    raise request.xhr?.inspect
   	@address = Address.where(:email => params[:email]).first
   end
 end
